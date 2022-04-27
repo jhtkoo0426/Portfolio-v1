@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: #3a3a3a;
+    --dark-grey: #3a3a3a;
+}
+
+@font-face {
+    font-family: 'RCLight';
+    src: url("../fonts/Radio Canada/static/RadioCanada/RadioCanada-Light.ttf");
+}
+
+@font-face {
+    font-family: 'SSProLight';
+    src: url("../fonts/SourceSansPro/SourceSansPro-Light.ttf");
+}
+
+.page-container {
+    height: auto;
+    padding: 10vw;
+}
+
+.container {
+    
+}
+
+.page-container > .intro {
+    height: calc(100vh - 20vw - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-container > .intro > p {
+    font-family: 'SSProLight';
+    font-size: 40px;
+}
+
+/* Topnav (Topnav.js component) styling */
+.topnav {
+    height: 60px;
+    /* padding: 5% 10%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.topnav > .logo {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--dark-grey);
+}
+
+.topnav-link {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}

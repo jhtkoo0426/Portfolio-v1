@@ -1,11 +1,13 @@
-import TopnavLinks from "./TopnavLinks"
+import TopnavLink from "./TopnavLink"
+import '../css/app.css';
 
-const Topnav = ({ title }) => {
+
+const Topnav = () => {
   return (
-    <section>
-      <h1>Topnav {title}</h1>
-      <TopnavLinks link="https://google.com"></TopnavLinks>
-    </section>
+    <nav className="topnav">
+      <div className="logo">J</div>
+      <TopnavLink link="https://github.com/jhtkoo0426" iconName={['fab', 'github']}></TopnavLink>
+    </nav>
   )
 }
 
