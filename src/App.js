@@ -1,29 +1,40 @@
-import Topnav from "./components/Topnav"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
-import React, { useState, useEffect } from "react"
-
-import './css/app.css';
-
-
-library.add(fab, faGithub, faLinkedin, faCheckSquare, faCoffee)
+import React, { useState, useEffect, useRef } from "react"
+import "../src/css/app.css";
 
 
-function App() {
+const App = () => {
+  // Loading state
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    document.title = "Justin Koo";
-  })
+    // Loading time transition into app page
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
 
-  return (
-    <div className="page-container">
-      <Topnav></Topnav>
-      <div className="intro container">
-        <p>I'm a Computer Science undergraduate based in London, UK.</p>
-        <p>I build data-driven web applications outside of university.</p>
+  return isLoading ?
+  	// If page is still loading then display the splash screen
+  	<div className="splash-screen">
+      <h1 className="splash-screen-title">never gonna give you up</h1>
+      <h3>uwu</h3>
+    </div>:
+  	<div className="app">
+      <div className='intro'>
+        <h1 className='app-title'>Hewo, I'm Justin. I'm a Computer Science undergraduate based in London</h1>
+        <h1 className='app-subtitle'>I'm interested in full-stack development with applied data science and machine learning.</h1>
       </div>
-    </div>
-  );
+  	</div>
+
+  // return (
+  //   <div className="splash-screen">
+  //     <h1 className="splash-screen-title">never gonna give you up</h1>
+  //     <h3>uwu</h3>
+  //   </div>
+  // )
 }
 
 export default App;

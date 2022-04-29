@@ -1,33 +1,27 @@
-Radio Canada Variable Font
-==========================
+Inter Variable Font
+===================
 
-This download contains Radio Canada as both a variable font and static fonts.
+This download contains Inter as both a variable font and static fonts.
 
-Radio Canada is a variable font with these axes:
-  wdth
+Inter is a variable font with these axes:
+  slnt
   wght
 
 This means all the styles are contained in a single file:
-  RadioCanada-VariableFont_wdth,wght.ttf
+  Inter-VariableFont_slnt,wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Radio Canada:
-  static/RadioCanada_Condensed/RadioCanada_Condensed-Light.ttf
-  static/RadioCanada_Condensed/RadioCanada_Condensed-Regular.ttf
-  static/RadioCanada_Condensed/RadioCanada_Condensed-Medium.ttf
-  static/RadioCanada_Condensed/RadioCanada_Condensed-SemiBold.ttf
-  static/RadioCanada_Condensed/RadioCanada_Condensed-Bold.ttf
-  static/RadioCanada_SemiCondensed/RadioCanada_SemiCondensed-Light.ttf
-  static/RadioCanada_SemiCondensed/RadioCanada_SemiCondensed-Regular.ttf
-  static/RadioCanada_SemiCondensed/RadioCanada_SemiCondensed-Medium.ttf
-  static/RadioCanada_SemiCondensed/RadioCanada_SemiCondensed-SemiBold.ttf
-  static/RadioCanada_SemiCondensed/RadioCanada_SemiCondensed-Bold.ttf
-  static/RadioCanada/RadioCanada-Light.ttf
-  static/RadioCanada/RadioCanada-Regular.ttf
-  static/RadioCanada/RadioCanada-Medium.ttf
-  static/RadioCanada/RadioCanada-SemiBold.ttf
-  static/RadioCanada/RadioCanada-Bold.ttf
+in those cases you can use the static font files for Inter:
+  static/Inter-Thin.ttf
+  static/Inter-ExtraLight.ttf
+  static/Inter-Light.ttf
+  static/Inter-Regular.ttf
+  static/Inter-Medium.ttf
+  static/Inter-SemiBold.ttf
+  static/Inter-Bold.ttf
+  static/Inter-ExtraBold.ttf
+  static/Inter-Black.ttf
 
 Get started
 -----------

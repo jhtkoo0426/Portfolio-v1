@@ -3,13 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    color: #3a3a3a;
+    /* color: #3a3a3a; */
     --dark-grey: #3a3a3a;
-}
-
-@font-face {
-    font-family: 'RCLight';
-    src: url("../fonts/Radio Canada/static/RadioCanada/RadioCanada-Light.ttf");
+    --black: #000;
+    --white: #fff;
 }
 
 @font-face {
@@ -17,52 +14,64 @@
     src: url("../fonts/SourceSansPro/SourceSansPro-Light.ttf");
 }
 
-.page-container {
-    height: auto;
-    padding: 10vw;
+@font-face {
+    font-family: 'PDReg';
+    src: url("../fonts/PlayfairDisplay/static/PlayfairDisplay-Regular.ttf");
 }
 
-.container {
-    
+@font-face {
+    font-family: 'InterReg';
+    src: url("../fonts/Inter/static/Inter-Regular.ttf");
 }
 
-.page-container > .intro {
-    height: calc(100vh - 20vw - 120px);
+@font-face {
+    font-family: 'InterThin';
+    src: url("../fonts/Inter/static/Inter-Thin.ttf");
+}
+
+/* Splash screen CSS */
+.splash-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'InterReg';
 }
 
-.page-container > .intro > p {
-    font-family: 'SSProLight';
+.splash-screen-title {
+    text-align: center;
     font-size: 40px;
+    animation: sst-animate 1s ease;
 }
 
-/* Topnav (Topnav.js component) styling */
-.topnav {
-    height: 60px;
-    /* padding: 5% 10%; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
+@keyframes sst-animate {
+    0% {transform: translateY(100px);}
+    100% {transform: translateY(0);}
 }
 
-.topnav > .logo {
-    width: 35px;
-    height: 35px;
+/* Portfolio Content CSS */
+.app {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.intro {
+    width: 100%;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
-    background-color: var(--dark-grey);
 }
 
-.topnav-link {
-    width: 35px;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
+.intro > .app-title, .app-subtitle {
+    font-family: 'InterReg';
 }
