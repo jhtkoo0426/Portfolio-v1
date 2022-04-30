@@ -73,5 +73,7 @@
 }
 
 .intro > .app-title, .app-subtitle {
+    width: 80%;
     font-family: 'InterReg';
+    font-size: 4vw;
 }
