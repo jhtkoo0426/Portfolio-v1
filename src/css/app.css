@@ -88,7 +88,7 @@
 
 
 /* Universal CSS */
-section {
+section:not(.prototype-display) {
     width: 100%;
     height: calc(100vh);
     padding: 0 15vw;
@@ -108,8 +108,8 @@ section {
 .section-title {
     margin-bottom: 0.5rem;
     color: var(--white);
-    font-family: 'InterBold';
-    /* font-family: 'RobotoMonoReg'; */
+    /* font-family: 'InterBold'; */
+    font-family: 'RobotoMonoReg';
     font-size: calc(15px + 1.5vw);
 }
 
@@ -268,4 +268,33 @@ section {
     background-color: transparent;
     font-size: 18px;
     color: var(--white);
+}
+
+
+/* Portfolio Content CSS */
+/* L4S */
+.prototype-display {
+    /* width: 70%;
+    margin: 10px 15%;
+    height: 50vh;
+    border-radius: 10px;
+    background-color: var(--white);
+    overflow: hidden; */
+    position: relative;
+}
+
+.prototype-display > img {
+    position:absolute;
+    /* max-width: 40%; */
+    /* margin: 10px 15%; */
+    width: 40vw;
+    height: auto;
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.l4s_login {
+    margin-left: 25vw; 
+    margin-top: 20vh;
 }
