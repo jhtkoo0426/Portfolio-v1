@@ -3,11 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    /* color: #3a3a3a; */
-    --dark-grey: #3a3a3a;
-    --grey: rgba(255, 255, 255, 0.7);
-    --turqoise: #0aca81;
+}
+
+:root {
+    --dark-grey: #101211;
+    --grey: #cecece;
+    --turqoise: #06cfcf; /* #7de917 */
     --black: #000;
+    --white2: rgb(240, 238, 238);
     --white: #fff;
 }
 
@@ -27,9 +30,15 @@
 }
 
 @font-face {
-    font-family: 'InterThin';
-    src: url("../fonts/Inter/static/Inter-Thin.ttf");
+    font-family: 'InterBold';
+    src: url("../fonts/Inter/static/Inter-Bold.ttf");
 }
+
+@font-face {
+    font-family: 'RobotoMonoReg';
+    src: url("../fonts/RobotoMono/static/RobotoMono-Regular.ttf");
+}
+
 
 /* Splash screen CSS */
 .splash-screen {
@@ -40,62 +49,223 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--black);
+    background-color: var(--turqoise);
     color: var(--white);
     font-family: 'InterReg';
+    animation: ss-fadeOut 1s ease forwards;
+    animation-delay: 2s;
+}
+
+@keyframes ss-fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
 }
 
 .splash-screen-title {
     text-align: center;
     font-size: 40px;
-    animation: sst-animate 1s ease;
 }
 
-@keyframes sst-animate {
-    0% {transform: translateY(100px);}
-    100% {transform: translateY(0);}
+.splash-screen-title > .dot {
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: inline-block;
+    animation: dot-animate 1s ease infinite;
 }
+
+@keyframes dot-animate {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.dot:nth-child(1) { animation-delay: 0s; }
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.5s; }
+
+
+/* Universal CSS */
+section {
+    width: 100%;
+    height: calc(100vh);
+    padding: 0 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-title {
+    margin-bottom: 0.5rem;
+    color: var(--white);
+    font-family: 'InterBold';
+    /* font-family: 'RobotoMonoReg'; */
+    font-size: calc(15px + 1.5vw);
+}
+
+.section-title > span, .section-title > span > a {
+    font-family: 'RobotoMonoReg';
+    color: var(--turqoise);
+}
+
+.section-subtitle {
+    font-family: 'RobotoMonoReg';
+    font-size: calc(10px + 0.4vw);
+    color: var(--grey);
+}
+
+.section-content {
+    font-family: 'RobotoMonoReg';
+    font-size: calc(10px + 0.4vw);
+    color: var(--white);
+}
+
+.software-stack {
+    margin-top: 20px;
+}
+
+.software-stack > span {
+    background-color: var(--grey);
+    border-radius: 8px;
+    padding: 2px 12px;
+    margin-right: 10px;
+    white-space: nowrap;
+    font-family: 'RobotoMonoReg';
+    color: var(--dark-grey);
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 20px;
+    background-color: var(--dark-grey);
+}
+  
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: var(--white);
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: #d6dee1;
+}
+
 
 /* Portfolio Content CSS */
 .app {
     width: 100%;
     /* height: 100%; */
     /* min-height: 100vh; */
-    background-color: var(--black);
+    background-color: var(--dark-grey);
+    color: var(--black);
+    animation: app-fadeIn 2.5s;
+}
+
+@keyframes app-fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Topnav */
+/* Top navigation bar */
+.topnav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15vw;
+    font-family: monospace;
+    background-color: var(--dark-grey);
+}
+
+.topnav > a {
+    text-decoration: none;
+    font-family: 'RobotoMonoReg';
+    font-size: 24px;
     color: var(--white);
 }
 
-#intro {
-    width: 100%;
-    height: 100vh;
+.topnav-menu {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.topnav-menu > a {
+    position: relative;
+    display: flex;
     align-items: center;
+    padding: 0 10px;
+    text-decoration: none;
+    font-family: 'RobotoMonoReg';
+    font-size: 18px;
+    color: var(--white);
 }
-
-#intro > .app-title, .app-subtitle {
+  
+.topnav-menu > a:not(.hoverable)::before {
+    content: '';
+    position: absolute;
     width: 80%;
-    font-family: 'InterReg';
+    height: 2px;
+    margin: 0 10%;
+    border-radius: 1px;
+    bottom: 0;
+    left: 0;
+    top: 27px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+    background-color: var(--white);
+}
+  
+.topnav-menu > a:not(.hoverable):hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    color: var(--white);
 }
 
-#intro > .app-title {
-    margin-bottom: 2.5vh;
-    font-size: calc(35px + 2vw);
-}
-
-#intro > .app-title span {
+.topnav-menu > a.hoverable > FontAwesomeIcon {
     color: var(--turqoise);
 }
 
-#intro > .app-subtitle {
-    font-weight: 500;
-    font-size: calc(15px + 2vw);
-    color: var(--grey);
+@media (max-width: 500px) {
+    .topnav > a {
+        font-size: 16px;
+    }
+
+    .topnav-menu > a {
+        padding: 0 5px;
+        font-size: 10px;
+    }
+
+    .topnav-menu {
+        position: relative;
+        right: 15vw;
+    }
 }
 
-.page-item {
-    width: 100%;
-    height: 100vh;
-    background-color: #000;
+.bulb {
+    padding: 0 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    color: var(--white);
 }
