@@ -255,11 +255,23 @@
 }
 
 /* L4S section */
-#l4s-title {
+#l4s-proj-subtitle, #autofaq-proj-subtitle, #okane-proj-subtitle {
     margin: 20px 0;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-family: 'MontBold';
     /* font-family: 'InterBold'; */
     font-size: 18px;
+}
+
+#l4s-proj-title, #autofaq-proj-title, #okane-proj-title {
+    font-size: 60px;
+}
+
+#autofaq-proj-subtitle, #autofaq-proj-title {
+    text-align: right;
+}
+
+#autofaq-proj-img {
+    float: right;
 }

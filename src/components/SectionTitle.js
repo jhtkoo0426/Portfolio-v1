@@ -1,4 +1,4 @@
-const SectionTitle = ({ id, children}) => {
+const SectionTitle = ({ id, children }) => {
     return (
         <h1 className="section-title" id={id}>{ children }</h1>
     )

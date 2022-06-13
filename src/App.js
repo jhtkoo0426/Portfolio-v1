@@ -73,11 +73,32 @@ const App = () => {
         </PageSection>
 
         <PageSection>
-          <SectionContent classes={"prototype-display"}>
-            <SectionImage source={l4s_landing}></SectionImage>
+          <SectionContent classes={"l4s-proj-showcase"}>
+            <SectionImage source={l4s_landing} id={"l4s-proj-img"}></SectionImage>
           </SectionContent>
-          <SectionTitle id={"l4s-title"}>Web Development - case available via link</SectionTitle>
-          <SectionTitle id={""}>Django Webapp Prototype - Look4Schools UK</SectionTitle>
+          <SectionTitle id={"l4s-proj-subtitle"}>Web Development - case available via link</SectionTitle>
+          <SectionTitle id={"l4s-proj-title"}>Django Webapp Prototype - Look4Schools UK</SectionTitle>
+          {/* TODO: Add link to view details of project */}
+        </PageSection>
+
+        <PageSection>
+          <SectionContent classes={"autofaq-proj-showcase"}>
+            <SectionImage source={l4s_landing} id={"autofaq-proj-img"}></SectionImage>
+          </SectionContent>
+          <SectionTitle id={"autofaq-proj-subtitle"}>Web Development/Machine Learning - case available 
+            on request
+          </SectionTitle>
+          <SectionTitle id={"autofaq-proj-title"}>AutoFAQ Webapp - UCL IXN Programme</SectionTitle>
+          {/* TODO: Add link to view details of project */}
+        </PageSection>
+
+        <PageSection>
+          <SectionContent classes={"okane-proj-showcase"}>
+            <SectionImage source={l4s_landing} id={"okane-proj-img"}></SectionImage>
+          </SectionContent>
+          <SectionTitle id={"okane-proj-subtitle"}>Algorithms & Trading - case available via link</SectionTitle>
+          <SectionTitle id={"okane-proj-title"}>Okane - Personal Featured Project</SectionTitle>
+          {/* TODO: Add link to view details of project */}
         </PageSection>
 
         {/* <PageSection>
