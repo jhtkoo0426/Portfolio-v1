@@ -1,4 +1,3 @@
-import { library } from '@fortawesome/fontawesome-svg-core'
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 import PageSection from './components/PageSection'
 import SectionTitle from './components/SectionTitle'
@@ -6,13 +5,10 @@ import SectionSubtitle from './components/SectionSubtitle'
 import SectionContent from './components/SectionContent'
 import SectionImage from './components/SectionImage'
 import { fab, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faCoffee, faLightbulb, faProjectDiagram, faRobot, faDesktopAlt } from '@fortawesome/free-solid-svg-icons'
 import React, { useState, useEffect, useRef } from "react"
 import Scrollbar from 'smooth-scrollbar'
 import "../src/css/app.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import l4s_landing from './media/l4s_device_mockup.png'
-import l4s_login from './media/l4s_login_device_mockup.png';
 
 
 const App = () => {

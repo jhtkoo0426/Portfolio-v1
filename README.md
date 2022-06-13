@@ -18,3 +18,9 @@ This is the first iteration of my 2022 portfolio.
 - [ ] Add background to landing page (with parallax if possible).
 - [ ] Add smooth scroll.
 - [ ] Add fade in/out effects.
+- [ ] Mobile Responsiveness
+- [ ] CSS webkit
+
+## TODO (Overall)
+- [ ] Refactor React.js components.
+- [ ] Improve CSS code quality.
