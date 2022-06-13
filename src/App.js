@@ -22,35 +22,6 @@ const App = () => {
   const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
   const FadeUp = batch(Fade(), Move(), Sticky());
 
-
-  // Bulb light on/off function
-  var clicked = false;
-  var dark_grey = "#101211";
-  var white = '#fff';
-  var grey = '#cecece';
-
-  const bulb = React.useRef(null);
-
-  useEffect(() => {
-    function letThereBeLight() {
-      if (clicked == false) {
-          clicked = true;
-          document.documentElement.style.setProperty("--dark-grey", white);
-          document.documentElement.style.setProperty("--white", dark_grey);
-          document.documentElement.style.setProperty("--grey", dark_grey);
-      } else {
-          clicked = false;
-          document.documentElement.style.setProperty("--dark-grey", dark_grey);
-          document.documentElement.style.setProperty("--white", white);
-          document.documentElement.style.setProperty("--grey", grey);
-      }
-    }
-
-    if (bulb && bulb.current) {
-      bulb.current.addEventListener('click', letThereBeLight);
-    }
-  })
-
   useEffect(() => {
     // Loading time transition into app page
     setTimeout(() => {
@@ -68,59 +39,79 @@ const App = () => {
       </h1>
     </div>:
   	<div className="app">
-      <nav className="topnav pd0-15w">
-          <a href="">justin.</a>
+      
+
+      {/* Any content that shall be placed in the background --> */}
+      <div className='background'></div>
+      <div className='content'>
+        <nav className="topnav">
+          <a href="" className=''>justin koo</a>
           <div className="topnav-menu">
-              <a href="">about</a>
-              <a href="">work</a>
-              <a className="hoverable" href="https://github.com/jhtkoo0426" target="_blank" rel="noreferrer" style={{color: "var(--turqoise)"}}>
-                <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
-              </a>
-              <a className="hoverable" href="https://www.linkedin.com/in/justin-koo-29bb831b2/" target="_blank" rel="noreferrer" style={{color: "var(--turqoise)"}}>
-                <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
-              </a>
-              <button className="bulb" id="bulb" ref={bulb}>
-                <FontAwesomeIcon icon={faLightbulb}></FontAwesomeIcon>
-              </button>
+              <a href=''>about</a>
+              <a href=''>work</a>
           </div>
-      </nav>
+        </nav>
+        <PageSection id={"intro"}>
+          <SectionTitle>Fast and Curious.</SectionTitle>
+          <SectionSubtitle>I’m a software engineer specializing in building (and occasionally designing) 
+            exceptional digital experiences.</SectionSubtitle>
+        </PageSection>
+        {/* TODO: Add "check out featured works" guided link */}
 
-      <PageSection id={"intro"}>
-        <SectionTitle>justin <span>is...</span></SectionTitle>
-        <SectionSubtitle>a Computer Science undergraduate based in London</SectionSubtitle>
-        <SectionSubtitle>++ University College London (Year 2)</SectionSubtitle>
-        <SectionSubtitle>++ interested in data science & finance</SectionSubtitle>
-        <SectionSubtitle>++ playing with machine learning</SectionSubtitle>
-        <SectionSubtitle>++ astrophotographer</SectionSubtitle>
-      </PageSection>
+        {/* TODO: Move about section to "About" page. */}
+        <PageSection>
+          <SectionTitle>About</SectionTitle>
+          <SectionSubtitle>I am currently working towards a Bachelors degree in Computer Science @ 
+            University College London. Since the course mainly focuses on the fundamental concepts of 
+            computing, it does not fully prepare me as a software engineer.
+          </SectionSubtitle><br></br>
+          <SectionSubtitle>During lockdowns and the pandemic, I made use of the extra free time I had 
+            and enrolled in courses related to machine learning, finance and web development (and 
+            design), while occasionally building webapps and automated projects.
+          </SectionSubtitle>
+        </PageSection>
 
-      <PageSection>
-        <SectionTitle>Curriculum Vitae</SectionTitle>
-        <SectionSubtitle>&gt;&gt; and work showcase</SectionSubtitle>
-      </PageSection>
+        <PageSection>
+          <SectionContent classes={"prototype-display"}>
+            <img src={l4s_landing} alt="" className='l4s_landing'></img>
+            <img src={l4s_login} alt="" className='l4s_login'></img>
+          </SectionContent>
+          <SectionTitle id={"l4s-title"}>Look4Schools UK</SectionTitle>
+          <SectionSubtitle>Since April 2020, I've been working at L4S, a new education agency that aims 
+            to introduce students from Hong Kong to study abroad in the UK.
+          </SectionSubtitle>
+          <SectionSubtitle>While working there, I helped with improving the company's sitemap, and built 
+            a <span>Django webapp prototype</span>, to demonstrate the workflow for managing account 
+            entities and school applications...
+          </SectionSubtitle>
+          
+        </PageSection>
 
-      <PageSection>
-        <SectionTitle>Look4SchoolsUK<br></br><span>(April 2020 - Present)</span></SectionTitle>
-        <SectionSubtitle>&gt;&gt; an education agency that introduces international
-                students to study in the UK.</SectionSubtitle>
-      </PageSection>
+        {/* <PageSection id={"l4s-2"}>
+          <SectionTitle>...and also collected and analysed UK school data, e.g. A Level performance,
+            school inspection ratings, etc.
+          </SectionTitle>
+        </PageSection> */}
 
-      <PageSection>
-        <SectionTitle>While working at L4S, I contributed to the company's website design
-                process, and built a <span>Django webapp prototype</span>, to demonstrate the 
-                workflow for managing account entities and school applications...</SectionTitle>
-        <SectionContent classes={"prototype-display"}>
-          <img src={l4s_landing} alt="" className='l4s_landing'></img>
-          <img src={l4s_login} alt="" className='l4s_login'></img>
-        </SectionContent>
-      </PageSection>
+        {/* <PageSection>
+          <SectionTitle>
+            selected projects <span><FontAwesomeIcon icon={faProjectDiagram}></FontAwesomeIcon></span>
+          </SectionTitle>
+          <SectionSubtitle>&gt;&gt; some of my projects that I'm really proud of!</SectionSubtitle>
+        </PageSection> */}
 
-      <PageSection>
-        <SectionTitle>
-          selected projects <span><FontAwesomeIcon icon={faProjectDiagram}></FontAwesomeIcon></span>
-        </SectionTitle>
-        <SectionSubtitle>&gt;&gt; some of my projects that I'm really proud of!</SectionSubtitle>
-      </PageSection>
+        {/* <PageSection>
+          <SectionTitle>okane</SectionTitle>
+        </PageSection> */}
+      </div>
+      {/* <nav>
+        <a className="hoverable" href="https://github.com/jhtkoo0426" target="_blank" rel="noreferrer" style={{color: "var(--turqoise)"}}>
+          <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+        </a>
+        <a className="hoverable" href="https://www.linkedin.com/in/justin-koo-29bb831b2/" target="_blank" rel="noreferrer" style={{color: "var(--turqoise)"}}>
+          <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
+        </a>
+      </nav> */}
   	</div>
 }
 
