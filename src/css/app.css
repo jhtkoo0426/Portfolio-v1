@@ -39,6 +39,15 @@
     src: url("../fonts/RobotoMono/static/RobotoMono-Regular.ttf");
 }
 
+@font-face {
+    font-family: 'MontReg';
+    src: url("../fonts/Montserrat/static/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'MontBold';
+    src: url("../fonts/Montserrat/static/Montserrat-Bold.ttf");
+}
 
 /* Splash screen CSS */
 .splash-screen {
@@ -49,7 +58,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--turqoise);
+    background-color: var(--black);
+    /* background-color: var(--turqoise); */
     color: var(--white);
     font-family: 'InterReg';
     animation: ss-fadeOut 1s ease forwards;
@@ -88,66 +98,47 @@
 
 
 /* Universal CSS */
-section:not(.prototype-display) {
+section {
+    
+}
+
+.page-section {
     width: 100%;
-    height: calc(100vh);
-    padding: 0 15vw;
+    height: auto;
+    padding: 0 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .page-section {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    min-height: 100vh;
 }
 
-.section-title {
-    margin-bottom: 0.5rem;
-    color: var(--white);
-    /* font-family: 'InterBold'; */
-    font-family: 'RobotoMonoReg';
-    font-size: calc(15px + 1.5vw);
-}
-
-.section-title > span, .section-title > span > a {
-    font-family: 'RobotoMonoReg';
-    color: var(--turqoise);
+.page-section > .section-title {
+    font-family: 'MontBold';
+    font-size: 80px;
 }
 
 .section-subtitle {
-    font-family: 'RobotoMonoReg';
-    font-size: calc(10px + 0.4vw);
-    color: var(--grey);
+    font-family: 'InterReg';
+    font-size: 25px;
+}
+
+
+@media (max-width: 552px) {
+    .page-section > .section-title { font-size: 40px; }
+    .page-section > .section-subtitle { font-size: 22px; }
 }
 
 .section-content {
-    font-family: 'RobotoMonoReg';
-    font-size: calc(10px + 0.4vw);
-    color: var(--white);
-}
-
-.software-stack {
-    margin-top: 20px;
-}
-
-.software-stack > span {
-    background-color: var(--grey);
-    border-radius: 8px;
-    padding: 2px 12px;
-    margin-right: 10px;
-    white-space: nowrap;
-    font-family: 'RobotoMonoReg';
-    color: var(--dark-grey);
+    
 }
 
 /* custom scrollbar */
 ::-webkit-scrollbar {
-    width: 20px;
-    background-color: var(--dark-grey);
+    width: 19px;
+    background-color: var(--white);
 }
   
 ::-webkit-scrollbar-track {
@@ -155,7 +146,7 @@ section:not(.prototype-display) {
 }
   
 ::-webkit-scrollbar-thumb {
-    background-color: var(--white);
+    background-color: var(--dark-grey);
     border-radius: 20px;
     border: 6px solid transparent;
     background-clip: content-box;
@@ -166,13 +157,14 @@ section:not(.prototype-display) {
 }
 
 
-/* Portfolio Content CSS */
+/* APP LAYOUT */
 .app {
     width: 100%;
-    /* height: 100%; */
-    /* min-height: 100vh; */
-    background-color: var(--dark-grey);
-    color: var(--black);
+    height: 100%;
+    /* background-color: var(--dark-grey); */
+    /* color: var(--white); */
+    display: grid;
+    font-family: 'InterReg';
     animation: app-fadeIn 2.5s;
 }
 
@@ -181,50 +173,58 @@ section:not(.prototype-display) {
     100% {opacity: 1;}
 }
 
-/* Topnav */
-/* Top navigation bar */
+.background {
+    /* width: 100%; */
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 0;
+}
+
+.content {
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 1000;
+}
+
+
+/* Acutal content CSS */
 .topnav {
     position: fixed;
-    top: 0;
     width: 100%;
-    height: 60px;
-    z-index: 1000;
+    height: 80px;
+    padding: 0 15vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 15vw;
-    font-family: monospace;
-    background-color: var(--dark-grey);
+    font-family: 'MontReg';
+    font-size: 20px;
 }
 
 .topnav > a {
     text-decoration: none;
-    font-family: 'RobotoMonoReg';
-    font-size: 24px;
-    color: var(--white);
+    color: var(--black);
 }
 
-.topnav-menu {
-    display: flex;
-    justify-content: space-between;
-}
-
-.topnav-menu > a {
-    position: relative;
+.topnav > .topnav-menu {
+    height: 80px;
     display: flex;
     align-items: center;
+}
+
+.topnav > .topnav-menu > a {
+    position: relative;
     padding: 0 10px;
     text-decoration: none;
-    font-family: 'RobotoMonoReg';
+    font-family: 'MontReg';
     font-size: 18px;
-    color: var(--white);
+    color: var(--black);
 }
-  
-.topnav-menu > a:not(.hoverable)::before {
+
+.topnav > .topnav-menu > a::before {
     content: '';
     position: absolute;
     width: 80%;
-    height: 2px;
+    height: 1px;
     margin: 0 10%;
     border-radius: 1px;
     bottom: 0;
@@ -233,68 +233,27 @@ section:not(.prototype-display) {
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .3s ease-in-out;
-    background-color: var(--white);
+    background-color: var(--black);
 }
-  
-.topnav-menu > a:not(.hoverable):hover::before {
+
+.topnav > .topnav-menu > a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
-    color: var(--white);
 }
 
-.topnav-menu > a.hoverable > FontAwesomeIcon {
-    color: var(--turqoise);
+#intro {
+    text-align: center;
 }
 
-@media (max-width: 500px) {
-    .topnav > a {
-        font-size: 16px;
-    }
-
-    .topnav-menu > a {
-        padding: 0 5px;
-        font-size: 10px;
-    }
-
-    .topnav-menu {
-        position: relative;
-        right: 15vw;
-    }
+#intro > .section-subtitle {
+    text-align: center;
 }
 
-.bulb {
-    padding: 0 10px;
-    border: none;
-    background-color: transparent;
-    font-size: 18px;
-    color: var(--white);
+/* L4S section */
+#l4s-title {
+    font-size: 40px;
 }
 
-
-/* Portfolio Content CSS */
-/* L4S */
-.prototype-display {
-    /* width: 70%;
-    margin: 10px 15%;
-    height: 50vh;
-    border-radius: 10px;
-    background-color: var(--white);
-    overflow: hidden; */
-    position: relative;
-}
-
-.prototype-display > img {
-    position:absolute;
-    /* max-width: 40%; */
-    /* margin: 10px 15%; */
-    width: 40vw;
-    height: auto;
-    border-radius: 10px;
-    background-color: var(--white);
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.l4s_login {
-    margin-left: 25vw; 
-    margin-top: 20vh;
+.l4s_landing, .l4s_login {
+    width: 70vw;
 }
