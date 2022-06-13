@@ -4,14 +4,15 @@ import PageSection from './components/PageSection'
 import SectionTitle from './components/SectionTitle'
 import SectionSubtitle from './components/SectionSubtitle'
 import SectionContent from './components/SectionContent'
+import SectionImage from './components/SectionImage'
 import { fab, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faCoffee, faLightbulb, faProjectDiagram, faRobot, faDesktopAlt } from '@fortawesome/free-solid-svg-icons'
 import React, { useState, useEffect, useRef } from "react"
 import Scrollbar from 'smooth-scrollbar'
 import "../src/css/app.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import l4s_landing from './media/l4s.JPG'
-import l4s_login from './media/l4s_login.JPG';
+import l4s_landing from './media/l4s_device_mockup.png'
+import l4s_login from './media/l4s_login_device_mockup.png';
 
 
 const App = () => {
@@ -56,7 +57,7 @@ const App = () => {
           <SectionSubtitle>I’m a software engineer specializing in building (and occasionally designing) 
             exceptional digital experiences.</SectionSubtitle>
         </PageSection>
-        {/* TODO: Add "check out featured works" guided link */}
+        {/* TODO: Add "check out featured works" guided link. */}
 
         {/* TODO: Move about section to "About" page. */}
         <PageSection>
@@ -73,25 +74,11 @@ const App = () => {
 
         <PageSection>
           <SectionContent classes={"prototype-display"}>
-            <img src={l4s_landing} alt="" className='l4s_landing'></img>
-            <img src={l4s_login} alt="" className='l4s_login'></img>
+            <SectionImage source={l4s_landing}></SectionImage>
           </SectionContent>
-          <SectionTitle id={"l4s-title"}>Look4Schools UK</SectionTitle>
-          <SectionSubtitle>Since April 2020, I've been working at L4S, a new education agency that aims 
-            to introduce students from Hong Kong to study abroad in the UK.
-          </SectionSubtitle>
-          <SectionSubtitle>While working there, I helped with improving the company's sitemap, and built 
-            a <span>Django webapp prototype</span>, to demonstrate the workflow for managing account 
-            entities and school applications...
-          </SectionSubtitle>
-          
+          <SectionTitle id={"l4s-title"}>Web Development - case available via link</SectionTitle>
+          <SectionTitle id={""}>Django Webapp Prototype - Look4Schools UK</SectionTitle>
         </PageSection>
-
-        {/* <PageSection id={"l4s-2"}>
-          <SectionTitle>...and also collected and analysed UK school data, e.g. A Level performance,
-            school inspection ratings, etc.
-          </SectionTitle>
-        </PageSection> */}
 
         {/* <PageSection>
           <SectionTitle>
@@ -100,8 +87,11 @@ const App = () => {
           <SectionSubtitle>&gt;&gt; some of my projects that I'm really proud of!</SectionSubtitle>
         </PageSection> */}
 
-        {/* <PageSection>
-          <SectionTitle>okane</SectionTitle>
+        {/* TODO: Add work experience section. */}
+        {/* <PageSection id={"l4s-2"}>
+          <SectionTitle>...and also collected and analysed UK school data, e.g. A Level performance,
+            school inspection ratings, etc.
+          </SectionTitle>
         </PageSection> */}
       </div>
       {/* <nav>

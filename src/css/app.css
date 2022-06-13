@@ -97,11 +97,7 @@
 .dot:nth-child(3) { animation-delay: 0.5s; }
 
 
-/* Universal CSS */
-section {
-    
-}
-
+/* Components CSS */
 .page-section {
     width: 100%;
     height: auto;
@@ -131,11 +127,18 @@ section {
     .page-section > .section-subtitle { font-size: 22px; }
 }
 
-.section-content {
-    
+.section-img {
+    width: 900px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all 1s;
 }
 
-/* custom scrollbar */
+.section-img:hover {
+    filter: none;
+}
+
+/* custom scrollbar CSS */
 ::-webkit-scrollbar {
     width: 19px;
     background-color: var(--white);
@@ -246,14 +249,17 @@ section {
 }
 
 #intro > .section-subtitle {
+    width: 80%;
+    margin: 10px 10%;
     text-align: center;
 }
 
 /* L4S section */
 #l4s-title {
-    font-size: 40px;
-}
-
-.l4s_landing, .l4s_login {
-    width: 70vw;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'MontBold';
+    /* font-family: 'InterBold'; */
+    font-size: 18px;
 }
