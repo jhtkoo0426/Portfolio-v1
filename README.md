@@ -3,7 +3,7 @@ This is the first iteration of my 2022 portfolio.
 
 ## Software Stack
 - React.js
-- HTML, CSS, JavaScript
+- CSS, JavaScript
 
 ## TODO (Fundamentals)
 - [ ] Add "check out featured works" guided link.

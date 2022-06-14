@@ -4,6 +4,7 @@ import SectionTitle from './components/SectionTitle'
 import SectionSubtitle from './components/SectionSubtitle'
 import SectionContent from './components/SectionContent'
 import SectionImage from './components/SectionImage'
+import ProjectBox from "./components/ProjectBox"
 import { fab, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import React, { useState, useEffect, useRef } from "react"
 import Scrollbar from 'smooth-scrollbar'
@@ -96,13 +97,26 @@ const App = () => {
           <SectionTitle id={"okane-proj-title"}>Okane - Personal Featured Project</SectionTitle>
           {/* TODO: Add link to view details of project */}
         </PageSection>
+        
+        {/* hi */}
 
-        {/* <PageSection>
+        <PageSection>
           <SectionTitle>
-            selected projects <span><FontAwesomeIcon icon={faProjectDiagram}></FontAwesomeIcon></span>
+            Other Projects
           </SectionTitle>
-          <SectionSubtitle>&gt;&gt; some of my projects that I'm really proud of!</SectionSubtitle>
-        </PageSection> */}
+          <SectionSubtitle>Some projects that I'm really proud of!</SectionSubtitle>
+          <div className="projects-container">
+              <ProjectBox id={"pathfinder"} title="Pathfinder">
+                <p>Hello</p>
+              </ProjectBox>
+              <ProjectBox id={"tetris"} title="Tetris AI">
+                <p>Hello</p>
+              </ProjectBox>
+              <ProjectBox id={""} title="Testing">
+                <p>Hello</p>
+              </ProjectBox>
+          </div>
+        </PageSection>
 
         {/* TODO: Add work experience section. */}
         {/* <PageSection id={"l4s-2"}>

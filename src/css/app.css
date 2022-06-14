@@ -254,7 +254,7 @@
     text-align: center;
 }
 
-/* L4S section */
+/* Work showcases */
 #l4s-proj-subtitle, #autofaq-proj-subtitle, #okane-proj-subtitle {
     margin: 20px 0;
     text-transform: uppercase;
@@ -274,4 +274,33 @@
 
 #autofaq-proj-img {
     float: right;
+}
+
+/* Other projects showcases */
+/* Container for all other projects showcases */
+.projects-container {
+    display: grid;
+    margin: 20px 0;
+}
+
+@media (max-width: 999px) {
+    .projects-container {
+        display: block;
+    }
+}
+
+@media (min-width: 1000px) {
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+/* Single project showcase */
+.project-box {
+    height: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--grey);
 }

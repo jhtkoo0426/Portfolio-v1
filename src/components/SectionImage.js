@@ -1,3 +1,4 @@
+// React.js component for images.
 const SectionImage = ({ id, source }) => {
     return (
         <img className="section-img" id={id} src={source}></img>
