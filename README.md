@@ -7,11 +7,11 @@ This is the first iteration of my 2022 portfolio.
 
 ## TODO (Fundamentals)
 - [ ] Add "check out featured works" guided link.
-- [ ] Move about section to "About" page.
+- [ ] Add & link new pages.
 - [ ] Add link to view details of featured projects.
 - [ ] (TBC) Add work experience section.
-- [ ] Add software stack for portfolio.
-- [ ] Add botnav (with contacts & social media links).
+- [x] Add botnav (with contacts & social media links).
+- [x] Add other projects.
 
 ## TODO (UI/UX)
 - [ ] Add more design variety to work showcases.

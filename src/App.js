@@ -5,11 +5,12 @@ import SectionSubtitle from './components/SectionSubtitle'
 import SectionContent from './components/SectionContent'
 import SectionImage from './components/SectionImage'
 import ProjectBox from "./components/ProjectBox"
+import Anchor from "./components/Anchor"
 import { fab, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import React, { useState, useEffect, useRef } from "react"
 import Scrollbar from 'smooth-scrollbar'
 import "../src/css/app.css";
-import l4s_landing from './media/l4s_device_mockup.png'
+import l4s_landing from './media/l4s_device_mockup.png';
 
 
 const App = () => {
@@ -37,16 +38,14 @@ const App = () => {
       </h1>
     </div>:
   	<div className="app">
-      
-
       {/* Any content that shall be placed in the background --> */}
       <div className='background'></div>
       <div className='content'>
         <nav className="topnav">
           <a href="" className=''>justin koo</a>
           <div className="topnav-menu">
-              <a href=''>about</a>
-              <a href=''>work</a>
+              <Anchor>about</Anchor>
+              <Anchor>work</Anchor>
           </div>
         </nav>
         <PageSection id={"intro"}>
@@ -57,7 +56,7 @@ const App = () => {
         {/* TODO: Add "check out featured works" guided link. */}
 
         {/* TODO: Move about section to "About" page. */}
-        <PageSection>
+        <PageSection id={"about-section"}>
           <SectionTitle>About</SectionTitle>
           <SectionSubtitle>I am currently working towards a Bachelors degree in Computer Science @ 
             University College London. Since the course mainly focuses on the fundamental concepts of 
@@ -69,7 +68,7 @@ const App = () => {
           </SectionSubtitle>
         </PageSection>
 
-        <PageSection>
+        <PageSection id={"l4s-section"}>
           <SectionContent classes={"l4s-proj-showcase"}>
             <SectionImage source={l4s_landing} id={"l4s-proj-img"}></SectionImage>
           </SectionContent>
@@ -78,7 +77,7 @@ const App = () => {
           {/* TODO: Add link to view details of project */}
         </PageSection>
 
-        <PageSection>
+        <PageSection id={"autofaq-section"}>
           <SectionContent classes={"autofaq-proj-showcase"}>
             <SectionImage source={l4s_landing} id={"autofaq-proj-img"}></SectionImage>
           </SectionContent>
@@ -89,7 +88,7 @@ const App = () => {
           {/* TODO: Add link to view details of project */}
         </PageSection>
 
-        <PageSection>
+        <PageSection id={"okane-section"}>
           <SectionContent classes={"okane-proj-showcase"}>
             <SectionImage source={l4s_landing} id={"okane-proj-img"}></SectionImage>
           </SectionContent>
@@ -100,7 +99,7 @@ const App = () => {
         
         {/* hi */}
 
-        <PageSection>
+        <PageSection id={"other-projects-section"}>
           <SectionTitle>
             Other Projects
           </SectionTitle>
@@ -109,7 +108,7 @@ const App = () => {
               <ProjectBox id={"pathfinder"} title="Pathfinder">
                 <p>Hello</p>
               </ProjectBox>
-              <ProjectBox id={"tetris"} title="Tetris AI">
+              <ProjectBox id={"tetris"} title="Tetris Bot">
                 <p>Hello</p>
               </ProjectBox>
               <ProjectBox id={""} title="Testing">
@@ -118,6 +117,15 @@ const App = () => {
           </div>
         </PageSection>
 
+        <nav className="botnav">
+          <div className="botnav-menu">
+            <Anchor href={"https://www.linkedin.com/in/justin-koo-29bb831b2/"}>LinkedIn</Anchor>
+            <Anchor href={"https://github.com/jhtkoo0426"}>Github</Anchor>
+            <Anchor href={""}>Email</Anchor>
+          </div>
+          <p>Created from scratch with React.js</p>
+        </nav>
+
         {/* TODO: Add work experience section. */}
         {/* <PageSection id={"l4s-2"}>
           <SectionTitle>...and also collected and analysed UK school data, e.g. A Level performance,
@@ -125,14 +133,6 @@ const App = () => {
           </SectionTitle>
         </PageSection> */}
       </div>
-      {/* <nav>
-        <a className="hoverable" href="https://github.com/jhtkoo0426" target="_blank" rel="noreferrer" style={{color: "var(--turqoise)"}}>
-          <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
-        </a>
-        <a className="hoverable" href="https://www.linkedin.com/in/justin-koo-29bb831b2/" target="_blank" rel="noreferrer" style={{color: "var(--turqoise)"}}>
-          <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
-        </a>
-      </nav> */}
   	</div>
 }
 
