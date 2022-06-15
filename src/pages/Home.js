@@ -22,6 +22,10 @@ const Home = () => {
                             <SectionTitle>Fast and Curious.</SectionTitle>
                             <SectionSubtitle>I’m a software engineer specializing in building (and occasionally designing) 
                             exceptional digital experiences.</SectionSubtitle>
+                            <div className='guide'>
+                                <p>Check out my works below</p>
+                                <div className='guide-line'></div>
+                            </div>
                         </PageSection>
                     </Animator>
                 </ScrollPage>
@@ -86,13 +90,6 @@ const Home = () => {
                 </div>
                 <p>Created from scratch with React.js</p>
             </nav>
-
-            {/* TODO: Add work experience section. */}
-            {/* <PageSection id={"l4s-2"}>
-                <SectionTitle>...and also collected and analysed UK school data, e.g. A Level performance,
-                school inspection ratings, etc.
-                </SectionTitle>
-            </PageSection> */}
         </div>
     );
 }
