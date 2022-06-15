@@ -6,17 +6,26 @@ import SectionImage from '../components/SectionImage';
 import ProjectBox from "../components/ProjectBox";
 import Anchor from "../components/Anchor";
 import l4s_landing from '../media/l4s_device_mockup.png';
+import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 
+
+const FadeUp = batch(Fade(), MoveOut(0, -600), Sticky());
 
 const Home = () => {
     return (
         <div className='content'>
             {/* Intro section */}
-            <PageSection id={"intro"}>
-                <SectionTitle>Fast and Curious.</SectionTitle>
-                <SectionSubtitle>I’m a software engineer specializing in building (and occasionally designing) 
-                exceptional digital experiences.</SectionSubtitle>
-            </PageSection>
+            <ScrollContainer>
+                <ScrollPage>
+                    <Animator animation={FadeUp}>
+                        <PageSection id={"intro"}>
+                            <SectionTitle>Fast and Curious.</SectionTitle>
+                            <SectionSubtitle>I’m a software engineer specializing in building (and occasionally designing) 
+                            exceptional digital experiences.</SectionSubtitle>
+                        </PageSection>
+                    </Animator>
+                </ScrollPage>
+            </ScrollContainer>
             {/* TODO: Add "check out featured works" guided link. */}
 
             <PageSection id={"l4s-section"}>
@@ -27,6 +36,7 @@ const Home = () => {
                 <SectionTitle id={"l4s-proj-title"}>Django Webapp Prototype - Look4Schools UK</SectionTitle>
                 {/* TODO: Add link to view details of project */}
             </PageSection>
+            
 
             <PageSection id={"autofaq-section"}>
                 <SectionContent classes={"autofaq-proj-showcase"}>
