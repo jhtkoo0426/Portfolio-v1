@@ -34,37 +34,34 @@ const Home = () => {
             </ScrollContainer>
             {/* TODO: Add "check out featured works" guided link. */}
 
-            <PageSection id={"l4s-section"}>
-                <SectionContent classes={"l4s-proj-showcase"}>
-                <SectionImage source={l4s_landing} id={"l4s-proj-img"}></SectionImage>
+            <PageSection extra_class={"ps-work-showcase"}>
+                <SectionContent classes={"proj-showcase"}>
+                    <SectionImage source={l4s_landing} id={"l4s-proj-img"}></SectionImage>
                 </SectionContent>
-                <SectionTitle id={"l4s-proj-subtitle"}>Webdev - case available via <Link to="work">link</Link></SectionTitle>
+                <SectionTitle id={"l4s-proj-subtitle"}>Webdev - Case available</SectionTitle>
                 <SectionTitle id={"l4s-proj-title"}>Look4Schools UK - Django Webapp Prototype </SectionTitle>
-                {/* TODO: Add link to view details of project */}
+                <Link to="work">See Project</Link>
             </PageSection>
-            
 
-            <PageSection id={"autofaq-section"}>
-                <SectionContent classes={"autofaq-proj-showcase"}>
-                <SectionImage source={l4s_landing} id={"autofaq-proj-img"}></SectionImage>
+            <PageSection extra_class={"ps-work-showcase"}>
+                <SectionContent classes={"proj-showcase"}>
+                    <SectionImage source={l4s_landing} id={"autofaq-proj-img"}></SectionImage>
                 </SectionContent>
-                <SectionTitle id={"autofaq-proj-subtitle"}>Web Development/Machine Learning - case available 
+                <SectionTitle id={"autofaq-proj-subtitle"}>Webdev & ML - Case available 
                 on request
                 </SectionTitle>
                 <SectionTitle id={"autofaq-proj-title"}>UCL IXN Programme - AutoFAQ Webapp</SectionTitle>
-                {/* TODO: Add link to view details of project */}
             </PageSection>
 
-            <PageSection id={"okane-section"}>
-                <SectionContent classes={"okane-proj-showcase"}>
-                <SectionImage source={l4s_landing} id={"okane-proj-img"}></SectionImage>
+            <PageSection extra_class={"ps-work-showcase"}>
+                <SectionContent classes={"proj-showcase"}>
+                    <SectionImage source={l4s_landing} id={"okane-proj-img"}></SectionImage>
                 </SectionContent>
-                <SectionTitle id={"okane-proj-subtitle"}>Algorithms & Trading - case available via link</SectionTitle>
-                <SectionTitle id={"okane-proj-title"}>Okane - Personal Featured Project</SectionTitle>
-                {/* TODO: Add link to view details of project */}
+                <SectionTitle id={"okane-proj-subtitle"}>Algorithms & Trading - Case available</SectionTitle>
+                <SectionTitle id={"okane-proj-title"}>Personal Featured Project - Okane</SectionTitle>
+                <Link to="work">See Project</Link>
             </PageSection>
             
-            {/* hi */}
 
             <PageSection id={"other-projects-section"}>
                 <SectionTitle>

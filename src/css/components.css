@@ -3,10 +3,25 @@
     width: 100%;
     min-height: 100vh;
     height: auto;
-    padding: 0 15%;
+    padding: 0 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+/* The CSS of page-sections for work showcases are slightly different
+   to that of standard page-sections */
+.page-section.ps-work-showcase {
+    min-height: auto;
+    margin: 20vh 0;
+}
+
+/* Styling Link component in work showcase */
+.page-section.ps-work-showcase > a {
+    margin-top: 20px;
+    font-family: 'InterBold';
+    font-size: 14px;
+    color: var(--black);
 }
 
 .page-section > .section-title {
@@ -21,7 +36,7 @@
 }
 
 .section-img {
-    width: 50vw;
+    width: 100%;
     height: auto;
     filter: grayscale(100%);
     transition: all 1s;
@@ -42,7 +57,7 @@
     position: fixed;
     width: 100vw;
     height: 80px;
-    padding: 0 15%;
+    padding: 0 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,7 +111,7 @@
 .botnav {
     width: 100%;
     height: 200px;
-    padding: 0 15%;
+    padding: 0 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,7 +155,6 @@
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width: 480px) { 
-    .page-section { padding: 0 5%; }
     .page-section > .section-title { font-size: 30px; }
     .page-section > .section-subtitle { font-size: 14px; }
 

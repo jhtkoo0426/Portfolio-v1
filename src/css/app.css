@@ -149,7 +149,7 @@
 }
 
 .guide {
-    width: 70%;
+    width: 80%;
     position: absolute;
     bottom: 15%;
     display: flex;
@@ -206,9 +206,10 @@
     .guide { width: 90%; font-size: 14px; }
     .guide-line { height: 70px; }
 
-    #l4s-proj-subtitle, #autofaq-proj-subtitle, #okane-proj-subtitle {
-        font-size: 14px;
-    }
+    #l4s-proj-subtitle, #autofaq-proj-subtitle, #okane-proj-subtitle { font-size: 14px; }
+
+    .project-box { height: 200px; margin: 20px 0; }
+    .project-box:hover { transform: translateY(0); }
 }
 
 /* Custom, iPhone Retina */ 
