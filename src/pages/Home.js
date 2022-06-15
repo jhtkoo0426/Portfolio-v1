@@ -21,7 +21,7 @@ const Home = () => {
                 <ScrollPage>
                     <Animator animation={FadeUpSticky}>
                         {/* Intro section */}
-                        <PageSection id={"intro"}>
+                        <PageSection extra_class={"intro"}>
                             <SectionTitle>Fast and Curious.</SectionTitle>
                             <SectionSubtitle>I’m a software engineer specializing in building (and occasionally designing) 
                             exceptional digital experiences.</SectionSubtitle>

@@ -139,11 +139,11 @@
 
 /* CSS for non-component content */
 /* Intro section */
-#intro {
+.intro {
     text-align: center;
 }
 
-#intro > .section-subtitle {
+.intro > .section-subtitle {
     width: 80%;
     margin: 10px 10%;
 }
