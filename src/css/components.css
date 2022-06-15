@@ -1,0 +1,153 @@
+/* CSS File for React.js components */
+.page-section {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-section > .section-title {
+    /* font-family: 'MontBold'; */
+    font-family: 'InterBold';
+    font-size: 60px;
+}
+
+.page-section > .section-subtitle {
+    font-family: 'InterReg';
+    font-size: 25px;
+}
+
+.section-img {
+    width: 50vw;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all 1s;
+}
+
+.section-img:hover {
+    filter: none;
+}
+
+
+/* Container for all other projects showcases */
+.projects-container {
+    display: grid;
+    margin: 40px 0;
+}
+
+.topnav {
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    padding: 0 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    font-family: 'MontReg';
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.topnav > a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.topnav > .topnav-menu {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+/* Anchor is a special a tag with animations */
+.anchor, .topnav > .topnav-menu > a {
+    position: relative;
+    padding: 0 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--black);
+}
+
+.anchor::before, .topnav > .topnav-menu > a::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    margin: 0 10%;
+    border-radius: 1px;
+    bottom: 0;
+    left: 0;
+    top: 27px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+    background-color: var(--black);
+}
+
+.anchor:hover::before, .topnav > .topnav-menu > a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.botnav {
+    width: 100%;
+    height: 200px;
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.botnav-menu {
+    padding-bottom: 40px;
+}
+
+.botnav-menu > a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--black);
+}
+
+
+@media (max-width: 999px) {
+    .projects-container {
+        display: block;
+    }
+}
+
+@media (min-width: 1000px) {
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+/* Handling mobile responsiveness */
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) { }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) { }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) { }
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width: 480px) { 
+    .page-section { padding: 0 5%; }
+    .page-section > .section-title { font-size: 30px; }
+    .page-section > .section-subtitle { font-size: 14px; }
+
+    .topnav { font-size: 16px; }
+    .anchor, .topnav > .topnav-menu > a { font-size: 12px; }
+    .anchor::before, .topnav > .topnav-menu > a::before { top: 18px; }
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) { }

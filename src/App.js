@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Work from "./pages/Work";
 import React, { useState, useEffect } from "react";
 import "../src/css/app.css";
+import "../src/css/components.css";
 
 
 const AppRoute = () => {

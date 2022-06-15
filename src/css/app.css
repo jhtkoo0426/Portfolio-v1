@@ -59,7 +59,6 @@
     justify-content: center;
     align-items: center;
     background-color: var(--black);
-    /* background-color: var(--turqoise); */
     color: var(--white);
     font-family: 'InterReg';
     animation: ss-fadeOut 1s ease forwards;
@@ -97,47 +96,6 @@
 .dot:nth-child(3) { animation-delay: 0.5s; }
 
 
-/* Components CSS */
-.page-section {
-    width: 100%;
-    height: auto;
-    padding: 0 15%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.page-section {
-    min-height: 100vh;
-}
-
-.page-section > .section-title {
-    font-family: 'MontBold';
-    font-size: 80px;
-}
-
-.section-subtitle {
-    font-family: 'InterReg';
-    font-size: 25px;
-}
-
-
-@media (max-width: 552px) {
-    .page-section > .section-title { font-size: 40px; }
-    .page-section > .section-subtitle { font-size: 22px; }
-}
-
-.section-img {
-    width: 900px;
-    height: auto;
-    filter: grayscale(100%);
-    transition: all 1s;
-}
-
-.section-img:hover {
-    filter: none;
-}
-
 /* custom scrollbar CSS */
 ::-webkit-scrollbar {
     width: 19px;
@@ -160,7 +118,7 @@
 }
 
 
-/* APP LAYOUT */
+/* CSS for app container layout */
 .app {
     width: 100%;
     height: 100%;
@@ -179,84 +137,8 @@
 }
 
 
-/* Acutal content CSS */
-.topnav {
-    position: fixed;
-    width: 100vw;
-    height: 80px;
-    padding: 0 15vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--white);
-    font-family: 'MontReg';
-    font-size: 20px;
-    z-index: 1000;
-}
-
-.topnav > a {
-    text-decoration: none;
-    color: var(--black);
-}
-
-.topnav > .topnav-menu {
-    height: 80px;
-    display: flex;
-    align-items: center;
-}
-
-/* Anchor is a special a tag with animations */
-.anchor, .topnav > .topnav-menu > a {
-    position: relative;
-    padding: 0 10px;
-    text-decoration: none;
-    font-size: 16px;
-    color: var(--black);
-}
-
-.anchor::before, .topnav > .topnav-menu > a::before {
-    content: '';
-    position: absolute;
-    width: 80%;
-    height: 1px;
-    margin: 0 10%;
-    border-radius: 1px;
-    bottom: 0;
-    left: 0;
-    top: 27px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out;
-    background-color: var(--black);
-}
-
-.anchor:hover::before, .topnav > .topnav-menu > a:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
-}
-
-.botnav {
-    width: 100%;
-    height: 200px;
-    padding: 0 15vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.botnav-menu {
-    padding-bottom: 40px;
-}
-
-.botnav-menu > a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: var(--black);
-}
-
-
-/* Intro CSS */
+/* CSS for non-component content */
+/* Intro section */
 #intro {
     text-align: center;
 }
@@ -264,7 +146,6 @@
 #intro > .section-subtitle {
     width: 80%;
     margin: 10px 10%;
-    text-align: cente
 }
 
 .guide {
@@ -274,6 +155,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 16px;
 }
 
 .guide-line {
@@ -284,50 +166,19 @@
     background-color: var(--black);
 }
 
-/* Work showcases */
+
+/* Work showcases section */
 #l4s-proj-subtitle, #autofaq-proj-subtitle, #okane-proj-subtitle {
     margin: 20px 0;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    font-family: 'MontBold';
-    /* font-family: 'InterBold'; */
+    letter-spacing: 4px;
+    font-family: 'InterBold';
     font-size: 18px;
 }
 
-#l4s-proj-title, #autofaq-proj-title, #okane-proj-title {
-    font-size: 60px;
-}
 
-#autofaq-proj-subtitle, #autofaq-proj-title {
-    text-align: right;
-}
-
-#autofaq-proj-img {
-    float: right;
-}
-
-/* Other projects showcases */
-/* Container for all other projects showcases */
-.projects-container {
-    display: grid;
-    margin: 40px 0;
-}
-
-@media (max-width: 999px) {
-    .projects-container {
-        display: block;
-    }
-}
-
-@media (min-width: 1000px) {
-    .projects-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
-    }
-}
-
-/* Single project showcase */
+/* CSS for other projects showcases */
+/* Single project showcase container */
 .project-box {
     height: 400px;
     padding: 30px;
@@ -339,3 +190,26 @@
 .project-box:hover {
     transform: translateY(-10px);
 }
+
+/* Handling mobile responsiveness */
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) { }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) { }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) { }
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width: 480px) { 
+    .guide { width: 90%; font-size: 14px; }
+    .guide-line { height: 70px; }
+
+    #l4s-proj-subtitle, #autofaq-proj-subtitle, #okane-proj-subtitle {
+        font-size: 14px;
+    }
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) { }

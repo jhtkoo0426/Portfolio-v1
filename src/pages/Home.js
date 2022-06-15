@@ -7,9 +7,11 @@ import ProjectBox from "../components/ProjectBox";
 import Anchor from "../components/Anchor";
 import l4s_landing from '../media/l4s_device_mockup.png';
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
+import { Link } from 'react-router-dom';
 
 
 const FadeUp = batch(Fade(), MoveOut(0, -600), Sticky());
+const MoveInLeft = batch(MoveIn(-1000, 0));
 
 const Home = () => {
     return (
@@ -36,8 +38,8 @@ const Home = () => {
                 <SectionContent classes={"l4s-proj-showcase"}>
                 <SectionImage source={l4s_landing} id={"l4s-proj-img"}></SectionImage>
                 </SectionContent>
-                <SectionTitle id={"l4s-proj-subtitle"}>Web Development - case available via link</SectionTitle>
-                <SectionTitle id={"l4s-proj-title"}>Django Webapp Prototype - Look4Schools UK</SectionTitle>
+                <SectionTitle id={"l4s-proj-subtitle"}>Webdev - case available via <Link to="work">link</Link></SectionTitle>
+                <SectionTitle id={"l4s-proj-title"}>Look4Schools UK - Django Webapp Prototype </SectionTitle>
                 {/* TODO: Add link to view details of project */}
             </PageSection>
             
@@ -49,7 +51,7 @@ const Home = () => {
                 <SectionTitle id={"autofaq-proj-subtitle"}>Web Development/Machine Learning - case available 
                 on request
                 </SectionTitle>
-                <SectionTitle id={"autofaq-proj-title"}>AutoFAQ Webapp - UCL IXN Programme</SectionTitle>
+                <SectionTitle id={"autofaq-proj-title"}>UCL IXN Programme - AutoFAQ Webapp</SectionTitle>
                 {/* TODO: Add link to view details of project */}
             </PageSection>
 

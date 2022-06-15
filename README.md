@@ -12,6 +12,8 @@ This is the first iteration of my 2022 portfolio.
 
 ## TODO (UI/UX)
 - [ ] Add more design variety to work showcases.
+- [ ] Add animated effects when navigating between pages.
+- [ ] Add indicator on which page the user is current on.
 - [ ] Add background to landing page (with parallax if possible).
 - [ ] Mobile Responsiveness.
 - [ ] CSS webkit.
