@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: var(--white);
 }
 
 /* The CSS of page-sections for work showcases are slightly different
@@ -20,7 +21,7 @@
 .page-section.ps-work-showcase > a {
     margin-top: 20px;
     font-family: 'InterBold';
-    font-size: 18px;
+    font-size: 14px;
     color: var(--black);
 }
 
@@ -28,11 +29,13 @@
     /* font-family: 'MontBold'; */
     font-family: 'InterBold';
     font-size: 60px;
+    color: var(--black);
 }
 
 .page-section > .section-subtitle {
     font-family: 'InterReg';
     font-size: 25px;
+    color: var(--black);
 }
 
 .proj-showcase {
@@ -151,10 +154,11 @@
     .page-section > .section-subtitle { font-size: 14px; }
     .page-section.ps-work-showcase { margin: 100px 0; }
     .page-section.ps-work-showcase > a { font-size: 14px; }
-
     .proj-showcase {
         height: auto;
     }
+
+    
 
     .topnav { font-size: 16px; }
     .anchor, .topnav > .topnav-menu > a { font-size: 12px; }
