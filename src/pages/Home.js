@@ -11,12 +11,16 @@ import { Link } from 'react-router-dom';
 
 
 const FadeUpSticky = batch(Fade(), MoveOut(0, -600), Sticky());
-const FadeUp = batch(Fade(), MoveOut(0, -400));
-const MoveInLeft = batch(MoveIn(-1000, 0));
+const FadeUp = batch(Fade(), MoveOut(0, -200));
+const MoveInLeft = batch(MoveIn(-250, 0));
+const MoveInRight = batch(MoveIn(250, 0));
 
 const Home = () => {
     return (
         <div className='content'>
+            {/* The ScrollContainer, ScrollPage and Animator components are part of
+                the react-scroll-motion package. These help create the scrolling
+                effects seen on the page. */}
             <ScrollContainer>
                 <ScrollPage>
                     <Animator animation={FadeUpSticky}>
@@ -32,44 +36,35 @@ const Home = () => {
                         </PageSection>
                     </Animator>
                 </ScrollPage>
-                <ScrollPage>
-                    <Animator animation={FadeUp}>
-                        <PageSection extra_class={"ps-work-showcase"}>
-                            <SectionContent classes={"proj-showcase"}>
-                                <SectionImage source={l4s_landing} id={"l4s-proj-img"}></SectionImage>
-                            </SectionContent>
-                            <SectionTitle id={"l4s-proj-subtitle"}>Webdev - Case available</SectionTitle>
-                            <SectionTitle id={"l4s-proj-title"}>Look4Schools UK - Django Webapp Prototype </SectionTitle>
-                            <Link to="work">See Project</Link>
-                        </PageSection>
-                    </Animator>
-                </ScrollPage>
-                <ScrollPage>
-                    <Animator animation={FadeUp}>
-                        <PageSection extra_class={"ps-work-showcase"}>
-                            <SectionContent classes={"proj-showcase"}>
-                                <SectionImage source={l4s_landing} id={"autofaq-proj-img"}></SectionImage>
-                            </SectionContent>
-                            <SectionTitle id={"autofaq-proj-subtitle"}>Webdev & ML - Case available 
-                            on request
-                            </SectionTitle>
-                            <SectionTitle id={"autofaq-proj-title"}>UCL IXN Programme - AutoFAQ Webapp</SectionTitle>
-                        </PageSection>
-                    </Animator>
-                </ScrollPage>
-                <ScrollPage>
-                    <Animator animation={FadeUp}>
-                        <PageSection extra_class={"ps-work-showcase"}>
-                            <SectionContent classes={"proj-showcase"}>
-                                <SectionImage source={l4s_landing} id={"okane-proj-img"}></SectionImage>
-                            </SectionContent>
-                            <SectionTitle id={"okane-proj-subtitle"}>Algorithms & Trading - Case available</SectionTitle>
-                            <SectionTitle id={"okane-proj-title"}>Personal Featured Project - Okane</SectionTitle>
-                            <Link to="work">See Project</Link>
-                        </PageSection>
-                    </Animator>
-                </ScrollPage>
             </ScrollContainer>
+
+            <PageSection extra_class={"ps-work-showcase"}>
+                <SectionContent classes={"proj-showcase"}>
+                    <SectionImage source={l4s_landing} id={"l4s-proj-img"}></SectionImage>
+                </SectionContent>
+                <SectionTitle id={"l4s-proj-subtitle"}>Webdev - Case available</SectionTitle>
+                <SectionTitle id={"l4s-proj-title"}>Look4Schools UK - Django Webapp Prototype </SectionTitle>
+                <Link to="work">See Project</Link>
+            </PageSection>
+
+            <PageSection extra_class={"ps-work-showcase"}>
+                <SectionContent classes={"proj-showcase"}>
+                    <SectionImage source={l4s_landing} id={"autofaq-proj-img"}></SectionImage>
+                </SectionContent>
+                <SectionTitle id={"autofaq-proj-subtitle"}>Webdev & ML - Case available 
+                on request
+                </SectionTitle>
+                <SectionTitle id={"autofaq-proj-title"}>UCL IXN Programme - AutoFAQ Webapp</SectionTitle>
+            </PageSection>
+
+            <PageSection extra_class={"ps-work-showcase"}>
+                <SectionContent classes={"proj-showcase"}>
+                    <SectionImage source={l4s_landing} id={"okane-proj-img"}></SectionImage>
+                </SectionContent>
+                <SectionTitle id={"okane-proj-subtitle"}>Algorithms & Trading - Case available</SectionTitle>
+                <SectionTitle id={"okane-proj-title"}>Personal Featured Project - Okane</SectionTitle>
+                <Link to="work">See Project</Link>
+            </PageSection>
 
             <PageSection extra_class={"other-projects-section"}>
                 <SectionTitle>
@@ -88,7 +83,7 @@ const Home = () => {
                     </ProjectBox>
                 </div>
             </PageSection>
-
+            
             <nav className="botnav">
                 <div className="botnav-menu">
                     <Anchor href={"https://www.linkedin.com/in/justin-koo-29bb831b2/"}>LinkedIn</Anchor>

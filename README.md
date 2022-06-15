@@ -8,14 +8,13 @@ This is the first iteration of my 2022 portfolio.
 - [react-scroll-motion](https://github.com/1000ship/react-scroll-motion)
 
 ## TODO (Fundamentals)
-- [ ] Add link to view details of featured projects.
+- [ ] Elaborate on available projects in work page.
 
 ## TODO (UI/UX)
 - [ ] Add more design variety to work showcases.
 - [ ] Add animated effects when navigating between pages.
 - [ ] Add indicator on which page the user is current on.
 - [ ] Add background to landing page (with parallax if possible).
-- [ ] Mobile Responsiveness.
 - [ ] CSS webkit.
 - [ ] Improve splash screen animation.
 
@@ -23,6 +22,3 @@ This is the first iteration of my 2022 portfolio.
 ## TODO (Overall)
 - [ ] Refactor React.js components.
 - [ ] Improve CSS code quality.
-
-## Problems so far (last updated: June 15, 2022 01:14)
-- [ ] react-scroll-motion ScrollPage component messes up the layout for work showcases.

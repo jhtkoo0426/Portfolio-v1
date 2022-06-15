@@ -3,7 +3,7 @@
     width: 100%;
     min-height: 100vh;
     height: auto;
-    padding: 0 10%;
+    padding: 0 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +20,7 @@
 .page-section.ps-work-showcase > a {
     margin-top: 20px;
     font-family: 'InterBold';
-    font-size: 14px;
+    font-size: 18px;
     color: var(--black);
 }
 
@@ -35,9 +35,16 @@
     font-size: 25px;
 }
 
+.proj-showcase {
+    height: 70vh;
+    overflow: hidden;
+}
+
+
 .section-img {
     width: 100%;
     height: auto;
+    overflow: hidden;
     filter: grayscale(100%);
     transition: all 1s;
 }
@@ -50,11 +57,11 @@
     position: fixed;
     width: 100vw;
     height: 80px;
-    padding: 0 10%;
+    padding: 0 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--white);
+    /* background-color: var(--white); */
     font-family: 'MontReg';
     font-size: 20px;
     z-index: 1000;
@@ -105,7 +112,7 @@
 .botnav {
     width: 100%;
     height: 200px;
-    padding: 0 10%;
+    padding: 0 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,6 +127,11 @@
     margin: 0 10px;
     text-decoration: none;
     color: var(--black);
+}
+
+.botnav > p {
+    font-family: 'InterReg';
+    font-size: 14px;
 }
 
 
@@ -137,10 +149,18 @@
 @media only screen and (max-width: 480px) { 
     .page-section > .section-title { font-size: 30px; }
     .page-section > .section-subtitle { font-size: 14px; }
+    .page-section.ps-work-showcase { margin: 100px 0; }
+    .page-section.ps-work-showcase > a { font-size: 14px; }
+
+    .proj-showcase {
+        height: auto;
+    }
 
     .topnav { font-size: 16px; }
     .anchor, .topnav > .topnav-menu > a { font-size: 12px; }
     .anchor::before, .topnav > .topnav-menu > a::before { top: 18px; }
+
+    .botnav > p { font-size: 12px; }
 }
 
 /* Custom, iPhone Retina */ 
