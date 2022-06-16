@@ -5,6 +5,7 @@ import SectionContent from '../components/SectionContent';
 import SectionImage from '../components/SectionImage';
 import ProjectBox from "../components/ProjectBox";
 import Anchor from "../components/Anchor";
+
 import l4s_landing from '../media/l4s_device_mockup.png';
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 import { Link } from 'react-router-dom';
@@ -73,13 +74,19 @@ const Home = () => {
                 <SectionSubtitle>Some projects that I'm really proud of!</SectionSubtitle>
                 <div className="projects-container">
                     <ProjectBox id={"pathfinder"} title="Pathfinder">
-                    <p>Hello</p>
+                        <p className='pb-description'>Interactive web application that visualises
+                         the route-finding process between 2 London Underground stations.</p>
+                        <div className='pb-stack'>
+                            <span>Django</span><span>Python</span><span>HTML5</span>
+                            <span>CSS</span><span>JavaScript</span>
+                        </div>
                     </ProjectBox>
                     <ProjectBox id={"tetris"} title="Tetris Bot">
-                    <p>Hello</p>
-                    </ProjectBox>
-                    <ProjectBox id={""} title="Testing">
-                    <p>Hello</p>
+                        <p className='pb-description'>An autoplayer that plays Tetris. The bot 
+                        will attempt to get the highest score possible until the game is over.</p>
+                        <div className='pb-stack'>
+                            <span>Python</span>
+                        </div>
                     </ProjectBox>
                 </div>
             </PageSection>

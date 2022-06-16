@@ -7,7 +7,7 @@ const Layout = () => {
             <Link to="/">justin koo</Link>
             <div className="topnav-menu">
                 <Link to="/about">about</Link>
-                <Link to="/work">work</Link>
+                <Link to="/work">works</Link>
             </div>
           </nav>  
           <Outlet/>
