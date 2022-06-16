@@ -2,6 +2,7 @@ import { Outlet, Link } from "react-router-dom";
 
 const Layout = () => {
     return (
+        // Topnav + content wrapper for portfolio
         <div className="app">
           <nav className="topnav">
             <Link to="/">justin koo</Link>

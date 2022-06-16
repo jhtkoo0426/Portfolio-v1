@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import React, { useState, useEffect } from "react";
+
 import "../src/css/app.css";
 import "../src/css/components.css";
 
@@ -11,6 +12,7 @@ import "../src/css/components.css";
 const AppRoute = () => {
   return (
     <Routes>
+      {/* Webframe for portfolio (Layout is the base template) */}
       <Route path="/" element={<Layout />}>
         <Route index element={<Home></Home>} />
         <Route path="about" element={<About />} />
@@ -20,10 +22,11 @@ const AppRoute = () => {
   );
 };
 
+// Main Function
 export default function App() {
+  // Declaring states for using splash screen.
   const [isLoading, setIsLoading] = useState(true);
 
-  // Load portfolio page with splash screen
   useEffect(() => {
     // Loading time transition into app page
     setTimeout(() => {
@@ -41,8 +44,7 @@ export default function App() {
         <span className='dot'></span>
       </h1>
     </div>:
-    
-    // Page finished loading -> Display portfolio
+    // Page finished loading -> Load portfolio
     <BrowserRouter>
       <AppRoute />
     </BrowserRouter>

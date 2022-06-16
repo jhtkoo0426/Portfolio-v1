@@ -7,36 +7,20 @@ import ProjectBox from "../components/ProjectBox";
 import Anchor from "../components/Anchor";
 
 import l4s_landing from '../media/l4s_device_mockup.png';
-import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 import { Link } from 'react-router-dom';
 
-
-const FadeUpSticky = batch(Fade(), MoveOut(0, -600), Sticky());
-const FadeUp = batch(Fade(), MoveOut(0, -200));
-const MoveInLeft = batch(MoveIn(-250, 0));
-const MoveInRight = batch(MoveIn(250, 0));
 
 const Home = () => {
     return (
         <div className='content'>
-            {/* The ScrollContainer, ScrollPage and Animator components are part of
-                the react-scroll-motion package. These help create the scrolling
-                effects seen on the page. */}
-            <ScrollContainer>
-                <ScrollPage>
-                    <Animator animation={FadeUpSticky}>
-                        {/* Intro section */}
-                        <PageSection extra_class={"intro"}>
-                            <SectionTitle>Fast and Curious.</SectionTitle>
-                            <SectionSubtitle>I’m a Computer Science undergrad focused on web development and machine learning.</SectionSubtitle>
-                            <div className='guide'>
-                                <p>Check out my works below</p>
-                                <div className='guide-line'></div>
-                            </div>
-                        </PageSection>
-                    </Animator>
-                </ScrollPage>
-            </ScrollContainer>
+            <PageSection extra_class={"intro"}>
+                <SectionTitle>Fast and Curious.</SectionTitle>
+                <SectionSubtitle>I’m a Computer Science undergrad focused on web development and machine learning.</SectionSubtitle>
+                <div className='guide'>
+                    <p>Check out my works below</p>
+                    <div className='guide-line'></div>
+                </div>
+            </PageSection>
 
             <PageSection extra_class={"ps-work-showcase"}>
                 <SectionContent classes={"proj-showcase"}>

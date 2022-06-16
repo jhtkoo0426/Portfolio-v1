@@ -58,7 +58,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--black);
+    background-color: rgba(5, 207, 207, 0.2);
     color: var(--white);
     font-family: 'InterReg';
     animation: ss-fadeOut 1s ease forwards;
