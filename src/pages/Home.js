@@ -28,8 +28,7 @@ const Home = () => {
                         {/* Intro section */}
                         <PageSection extra_class={"intro"}>
                             <SectionTitle>Fast and Curious.</SectionTitle>
-                            <SectionSubtitle>I’m a software engineer specializing in building (and occasionally designing) 
-                            exceptional digital experiences.</SectionSubtitle>
+                            <SectionSubtitle>I’m a Computer Science undergrad focused on web development and machine learning.</SectionSubtitle>
                             <div className='guide'>
                                 <p>Check out my works below</p>
                                 <div className='guide-line'></div>
@@ -73,7 +72,7 @@ const Home = () => {
                 </SectionTitle>
                 <SectionSubtitle>Some projects that I'm really proud of!</SectionSubtitle>
                 <div className="projects-container">
-                    <ProjectBox id={"pathfinder"} title="Pathfinder" gh_link="https://github.com/jhtkoo0426/Pathfinder" web_link="link">
+                    <ProjectBox id={"pathfinder"} title="Pathfinder" gh_link="https://github.com/jhtkoo0426/Pathfinder" web_link="">
                         <p className='pb-description'>Interactive web application that visualises
                          the route-finding process between 2 London Underground stations.</p>
                         <div className='pb-stack'>
@@ -81,7 +80,7 @@ const Home = () => {
                             <span>CSS</span><span>JavaScript</span>
                         </div>
                     </ProjectBox>
-                    <ProjectBox id={"tetris"} title="Tetris Bot">
+                    <ProjectBox id={"tetris"} title="Tetris Bot" gh_link={"https://github.com/jhtkoo0426/UCL-Tetris-AI"} web_link="">
                         <p className='pb-description'>An autoplayer that plays Tetris. The bot 
                         will attempt to get the highest score possible until the game is over.</p>
                         <div className='pb-stack'>
