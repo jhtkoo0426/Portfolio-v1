@@ -1,5 +1,5 @@
-# Personal Portfolio v1
-This is the first iteration of my 2022 portfolio.
+<h1 align="center">justinkoo.co.uk - v1</h1>
+<p align="center">This is the first iteration of my 2022 portfolio built with <a href="https://reactjs.org" target="_blank">React.js</a>.</p>
 
 ## Software Stack
 - React.js
