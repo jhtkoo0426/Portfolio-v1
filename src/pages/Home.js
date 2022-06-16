@@ -73,7 +73,7 @@ const Home = () => {
                 </SectionTitle>
                 <SectionSubtitle>Some projects that I'm really proud of!</SectionSubtitle>
                 <div className="projects-container">
-                    <ProjectBox id={"pathfinder"} title="Pathfinder">
+                    <ProjectBox id={"pathfinder"} title="Pathfinder" gh_link="https://github.com/jhtkoo0426/Pathfinder" web_link="link">
                         <p className='pb-description'>Interactive web application that visualises
                          the route-finding process between 2 London Underground stations.</p>
                         <div className='pb-stack'>

@@ -4,17 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Anchor from "./Anchor";
 
 // React.js component for an "other project".
-const ProjectBox = ({ id, children, title, links }) => {
+const ProjectBox = ({ id, children, title, gh_link, web_link }) => {
     return (
         <div className="project-box" id={id}>
             <div className="pb-header">
                 <FontAwesomeIcon icon={faFolder}></FontAwesomeIcon>
                 <div className='pb-links'>
-                    {links}
-                    <Anchor href={""} extra_class="no-animate">
+                    <Anchor href={gh_link} extra_class="no-animate">
                         <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
                     </Anchor>
-                    <Anchor href={""} extra_class="no-animate">
+                    <Anchor href={web_link} extra_class="no-animate">
                         <FontAwesomeIcon icon={faExternalLink}></FontAwesomeIcon>
                     </Anchor>
                 </div>
