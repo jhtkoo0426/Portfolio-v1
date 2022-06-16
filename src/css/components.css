@@ -134,8 +134,14 @@
 }
 
 .botnav > p {
+    margin: 5px 0;
+    text-align: center;
     font-family: 'InterReg';
     font-size: 14px;
+}
+
+.botnav > p > span {
+    white-space: nowrap;
 }
 
 
@@ -220,6 +226,7 @@
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width: 480px) { 
+    .page-section { padding: 0 10%;}
     .page-section > .section-title { font-size: 30px; }
     .page-section > .section-subtitle { font-size: 14px; }
     .page-section.ps-work-showcase { margin: 100px 0; }
@@ -233,6 +240,7 @@
     .anchor::before, .topnav > .topnav-menu > a::before { top: 18px; }
 
     .botnav > p { font-size: 12px; }
+    .botnav-menu { padding-bottom: 20px; }
 
     .project-box { height: 200px; margin: 20px 0; padding: 15px; }
     .project-box:hover { transform: translateY(0); }

@@ -51,9 +51,7 @@ const Home = () => {
             </PageSection>
 
             <PageSection extra_class={"other-projects-section"}>
-                <SectionTitle>
-                    Other Projects
-                </SectionTitle>
+                <SectionTitle>Other Projects</SectionTitle>
                 <SectionSubtitle>Some projects that I'm really proud of!</SectionSubtitle>
                 <div className="projects-container">
                     <ProjectBox id={"pathfinder"} title="Pathfinder" gh_link="https://github.com/jhtkoo0426/Pathfinder" web_link="">
@@ -71,6 +69,13 @@ const Home = () => {
                             <span>Python</span>
                         </div>
                     </ProjectBox>
+                    <ProjectBox id={"portfolio"} title="Portfolio v1" gh_link={"https://github.com/jhtkoo0426/Portfolio-v1"} web_link="">
+                        <p className='pb-description'>The first iteration of justinkoo.co.uk, built 
+                        with React.js.</p>
+                        <div className='pb-stack'>
+                            <span>React.js</span><span>JavaScript</span><span>CSS</span>
+                        </div>
+                    </ProjectBox>
                 </div>
             </PageSection>
             
@@ -78,8 +83,8 @@ const Home = () => {
                 <div className="botnav-menu">
                     <Anchor href={"https://www.linkedin.com/in/justin-koo-29bb831b2/"}>LinkedIn</Anchor>
                     <Anchor href={"https://github.com/jhtkoo0426"}>Github</Anchor>
-                    <Anchor href={""}>Email</Anchor>
                 </div>
+                <p>You can also find me via email: <span>jhtkbusiness@gmail.com</span></p>
                 <p>Created from scratch with React.js</p>
             </nav>
         </div>

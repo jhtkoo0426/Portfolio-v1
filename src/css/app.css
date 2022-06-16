@@ -177,9 +177,6 @@
 }
 
 
-
-
-
 /* Handling mobile responsiveness */
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) { }
@@ -198,7 +195,7 @@
         top: 200px;
     }
 
-    .guide { width: 70%; font-size: 14px; }
+    .guide { width: 80%; font-size: 14px; }
     .guide-line { height: 70px; }
 
     #l4s-proj-subtitle, #autofaq-proj-subtitle, #okane-proj-subtitle { font-size: 14px; }
