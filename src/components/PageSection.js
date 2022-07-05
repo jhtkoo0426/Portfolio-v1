@@ -1,6 +1,6 @@
-const PageSection = ({ children, extra_class }) => {
+const PageSection = ({ children, extra_class, id }) => {
     return (
-        <section className={`page-section ${extra_class}`}>
+        <section className={`page-section ${extra_class}`} id={id}>
             { children }
         </section>
     )

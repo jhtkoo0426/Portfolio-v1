@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Work from "./pages/Work";
+import Work_L4S from "./pages/Work_L4S";
+import Work_Okane from "./pages/Work_Okane";
 import React, { useState, useEffect } from "react";
 
 import "../src/css/app.css";
@@ -13,10 +14,11 @@ const AppRoute = () => {
   return (
     <Routes>
       {/* Webframe for portfolio (Layout is the base template) */}
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home></Home>} />
-        <Route path="about" element={<About />} />
-        <Route path="work" element={<Work/>} />
+      <Route path="/" element={<Layout/>}>
+        <Route index element={<Home/>} />
+        <Route path="about" element={<About/>} />
+        <Route path="work/l4s" element={<Work_L4S/>} />
+        <Route path="work/okane" element={<Work_Okane/>} />
       </Route>
     </Routes>
   );

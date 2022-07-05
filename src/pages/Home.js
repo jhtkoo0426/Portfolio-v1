@@ -7,6 +7,7 @@ import ProjectBox from "../components/ProjectBox";
 import Anchor from "../components/Anchor";
 
 import l4s_landing from '../media/l4s.JPG';
+import af_db from '../media/project_dashboard.PNG';
 import { Link } from 'react-router-dom';
 
 
@@ -28,12 +29,12 @@ const Home = () => {
                 </SectionContent>
                 <SectionTitle id={"l4s-proj-subtitle"}>Webdev - Case available</SectionTitle>
                 <SectionTitle id={"l4s-proj-title"}>Look4Schools UK - Django Webapp Prototype </SectionTitle>
-                <Link to="work">See Project</Link>
+                <Link to="work/l4s">See Project</Link>
             </PageSection>
 
             <PageSection extra_class={"ps-work-showcase"}>
                 <SectionContent classes={"proj-showcase"}>
-                    <SectionImage source={l4s_landing} id={"autofaq-proj-img"}></SectionImage>
+                    <SectionImage source={af_db} id={"autofaq-proj-img"}></SectionImage>
                 </SectionContent>
                 <SectionTitle id={"autofaq-proj-subtitle"}>Webdev & ML - Case available 
                 on request
@@ -47,7 +48,7 @@ const Home = () => {
                 </SectionContent>
                 <SectionTitle id={"okane-proj-subtitle"}>Algorithms & Trading - Case available</SectionTitle>
                 <SectionTitle id={"okane-proj-title"}>Personal Featured Project - Okane</SectionTitle>
-                <Link to="work">See Project</Link>
+                <Link to="work/okane">See Project</Link>
             </PageSection>
 
             <PageSection extra_class={"other-projects-section"}>
