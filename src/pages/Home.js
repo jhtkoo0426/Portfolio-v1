@@ -6,7 +6,7 @@ import SectionImage from '../components/SectionImage';
 import ProjectBox from "../components/ProjectBox";
 import Anchor from "../components/Anchor";
 
-import l4s_landing from '../media/l4s_device_mockup.png';
+import l4s_landing from '../media/l4s.JPG';
 import { Link } from 'react-router-dom';
 
 
@@ -15,7 +15,7 @@ const Home = () => {
         <div className='content'>
             <PageSection extra_class={"intro"}>
                 <SectionTitle>Fast and Curious.</SectionTitle>
-                <SectionSubtitle>I’m a Computer Science undergrad focused on web development and machine learning.</SectionSubtitle>
+                <SectionSubtitle>Computer Science undergrad focused on web development and machine learning.</SectionSubtitle>
                 <div className='guide'>
                     <p>Check out my works below</p>
                     <div className='guide-line'></div>

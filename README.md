@@ -17,7 +17,6 @@
 - [ ] CSS webkit.
 - [ ] Improve splash screen animation.
 
-
 ## TODO (Overall)
 - [ ] Refactor React.js components.
 - [ ] Improve CSS code quality.

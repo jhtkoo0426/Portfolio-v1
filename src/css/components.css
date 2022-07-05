@@ -21,27 +21,21 @@
     margin-top: 20px;
     font-family: 'InterBold';
     font-size: 14px;
-    color: var(--black);
+    color: var(--white);
 }
 
 .page-section > .section-title {
     /* font-family: 'MontBold'; */
     font-family: 'InterBold';
     font-size: 60px;
-    color: var(--black);
+    color: var(--white);
 }
 
 .page-section > .section-subtitle {
     font-family: 'InterReg';
     font-size: 25px;
-    color: var(--black);
+    color: var(--white);
 }
-
-.proj-showcase {
-    height: 70vh;
-    overflow: hidden;
-}
-
 
 .section-img {
     width: 100%;
@@ -49,6 +43,7 @@
     overflow: hidden;
     filter: grayscale(100%);
     transition: all 1s;
+    border-radius: 15px;
 }
 
 .section-img:hover {
@@ -71,7 +66,7 @@
 .topnav > a {
     text-decoration: none;
     font-family: 'InterReg';
-    color: var(--black);
+    color: var(--white);
 }
 
 .topnav > .topnav-menu {
@@ -87,7 +82,7 @@
     padding: 0 10px;
     text-decoration: none;
     font-size: 16px;
-    color: var(--black);
+    color: var(--white);
 }
 
 /* .anchor class with .no-animate disables the animation effect for anchor components. */
@@ -104,7 +99,7 @@
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .3s ease-in-out;
-    background-color: var(--black);
+    background-color: var(--white);
 }
 
 .anchor:not(.no-animate):hover::before, .topnav > .topnav-menu > a:hover::before {
@@ -130,7 +125,7 @@
 .botnav-menu > a {
     margin: 0 10px;
     text-decoration: none;
-    color: var(--black);
+    color: var(--white);
 }
 
 .botnav > p {
@@ -194,12 +189,14 @@
 
 .pb-title {
     margin: 10px 0;
+    color: var(--white);
     font-family: 'InterBold';
     font-size: 20px;
 }
 
 .pb-description {
     margin-bottom: 10px;
+    color: var(--white);
     font-family: 'InterReg';
     font-size: 16px;
 }
@@ -207,6 +204,7 @@
 .pb-stack > span {
     margin-right: 8px;
     white-space: nowrap;
+    color: var(--white);
     font-family: 'RobotoMonoReg';
     font-size: 14px;
 }
@@ -214,6 +212,7 @@
 /* Handling mobile responsiveness */
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
+    .page-section { padding: 0 5%; }
     .projects-container { display: block; }
     .project-box { height: 300px; margin: 20px 0; }
 }
