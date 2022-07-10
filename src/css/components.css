@@ -41,13 +41,8 @@
     width: 100%;
     height: auto;
     overflow: hidden;
-    filter: grayscale(100%);
     transition: all 1s;
     border-radius: 15px;
-}
-
-.section-img:hover {
-    filter: none;
 }
 
 .topnav {

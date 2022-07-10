@@ -6,7 +6,11 @@ import SectionImage from '../components/SectionImage';
 import ProjectBox from "../components/ProjectBox";
 import Anchor from "../components/Anchor";
 
-import l4s_landing from '../media/l4s.JPG';
+import l4s_landing from '../media/l4s_landing.jpg';
+import l4s_login from "../media/l4s_login.JPG";
+import l4s_oxbridge from "../media/l4s_oxbridge.JPG";
+import l4s_pupil from "../media/l4s_pupil_composition_chart.JPG";
+import l4s_school_academics from "../media/l4s_school_academics_graph.JPG";
 import af_db from '../media/project_dashboard.PNG';
 import { Link } from 'react-router-dom';
 
@@ -27,7 +31,7 @@ const Home = () => {
                 <SectionContent classes={"proj-showcase"}>
                     <SectionImage source={l4s_landing} id={"l4s-proj-img"}></SectionImage>
                 </SectionContent>
-                <SectionTitle id={"l4s-proj-subtitle"}>Webdev - Case available</SectionTitle>
+                <SectionTitle id={"l4s-proj-subtitle"}>Webdev | Python | Data Visualisation</SectionTitle>
                 <SectionTitle id={"l4s-proj-title"}>Look4Schools UK - Django Webapp Prototype </SectionTitle>
                 <Link to="work/l4s">See Project</Link>
             </PageSection>
@@ -36,9 +40,7 @@ const Home = () => {
                 <SectionContent classes={"proj-showcase"}>
                     <SectionImage source={af_db} id={"autofaq-proj-img"}></SectionImage>
                 </SectionContent>
-                <SectionTitle id={"autofaq-proj-subtitle"}>Webdev & ML - Case available 
-                on request
-                </SectionTitle>
+                <SectionTitle id={"autofaq-proj-subtitle"}>Webdev | ML (Info available on request)</SectionTitle>
                 <SectionTitle id={"autofaq-proj-title"}>UCL IXN Programme - AutoFAQ Webapp</SectionTitle>
             </PageSection>
 
@@ -46,7 +48,7 @@ const Home = () => {
                 <SectionContent classes={"proj-showcase"}>
                     <SectionImage source={l4s_landing} id={"okane-proj-img"}></SectionImage>
                 </SectionContent>
-                <SectionTitle id={"okane-proj-subtitle"}>Algorithms & Trading - Case available</SectionTitle>
+                <SectionTitle id={"okane-proj-subtitle"}>Algorithms | Trading | Python | Alpaca Market API</SectionTitle>
                 <SectionTitle id={"okane-proj-title"}>Personal Featured Project - Okane</SectionTitle>
                 <Link to="work/okane">See Project</Link>
             </PageSection>

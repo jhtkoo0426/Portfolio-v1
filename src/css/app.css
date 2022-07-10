@@ -59,7 +59,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(5, 207, 207, 0.2);
+    background-color: var(--black);
     color: var(--white);
     font-family: 'InterReg';
     animation: ss-fadeOut 1s ease forwards;
@@ -181,6 +181,12 @@
 
 .botnav {
     color: var(--white);
+}
+
+
+/* Specific work showcase sections */
+.content > #selected-works-l4s {
+    
 }
 
 
